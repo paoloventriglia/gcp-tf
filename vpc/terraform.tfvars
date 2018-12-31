@@ -1,6 +1,6 @@
 terragrunt = {
   terraform {
-    source = "https://github.com/paoloventriglia/gcp-tf-modules.git//modules/vpc"
+    source = "git::git@github.com:paoloventriglia/gcp-tf-modules.git"
   }
 }
 
