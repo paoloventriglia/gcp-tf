@@ -1,4 +1,5 @@
 // GCP Network
+
 project_id = "corebox-001"
 network_name = "corebox-001-vpc"
 subnets = [
@@ -28,4 +29,4 @@ secondary_ranges = {
           ip_cidr_range = "192.168.2.0/24"
         }
       ]
-}
+    }
