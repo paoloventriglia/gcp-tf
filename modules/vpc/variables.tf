@@ -7,8 +7,8 @@ variable "network_name" {
 }
 
 variable "subnets" {
-  type        = "list"
-  description = "The list of subnets being created"
+   type = "list"
+   description = "The list of subnets being created"
 }
 
 variable "secondary_ranges" {
