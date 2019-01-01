@@ -6,4 +6,10 @@
 *.tfstate.*
 
 # Keyfiles
-tf-account-cred.json 
+tf-account-cred.json
+
+# Logfiles 
+*.log
+
+# Terragrunt cache
+**/.terragrunt-cache/*
