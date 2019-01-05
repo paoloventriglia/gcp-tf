@@ -1,15 +1,12 @@
 terragrunt = {
   terraform {
     source = "git::git@github.com:paoloventriglia/gcp-tf-modules.git//modules/lb-http?ref=master"
-  }
-}
-
-terragrunt = {
+   }
   remote_state {
     backend = "local"
-    config {}
-  }
-}
+    config = { path = /home/vagrant/tfstate/terraform.tfstate }
+   }
+}  
 
 // HTTP Load balanacer
 

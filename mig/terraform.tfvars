@@ -2,12 +2,9 @@ terragrunt = {
   terraform {
     source = "git::git@github.com:paoloventriglia/gcp-tf-modules.git//modules/mig?ref=master"
   }
-}
-
-terragrunt = {
   remote_state {
     backend = "local"
-    config {}
+    config {path = "/home/vagrant/tfstate/terraform.tfstate"}
   }
 }
 
