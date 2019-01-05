@@ -4,6 +4,13 @@ terragrunt = {
   }
 }
 
+terragrunt = {
+  remote_state {
+    backend = "local"
+    config {}
+  }
+}
+
 // HTTP Load balanacer
 
 project = "corebox-001"

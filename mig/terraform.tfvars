@@ -4,6 +4,13 @@ terragrunt = {
   }
 }
 
+terragrunt = {
+  remote_state {
+    backend = "local"
+    config {}
+  }
+}
+
 // GCP Managed Instance Groups
 
 project = "corebox-001"
