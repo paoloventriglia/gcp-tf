@@ -6,7 +6,12 @@ terragrunt = {
     backend = "local"
     config = { path = "/home/vagrant/tfstate/lb-http/terraform.tfstate" }
    }
-}  
+}
+data "terraform_remote_state" "mig" {
+  backend = "local"
+  config { path = "/home/vagrant/tfstate/mig/terraform.tfstate"
+  }
+}
 
 // HTTP Load balanacer
 
@@ -15,7 +20,7 @@ name = "corebox-001-lb"
 target_tags = ["allow-http", "allow-service"]
 backends = {
     "0" = [
-      { group = "https://www.googleapis.com/compute/v1/projects/corebox-001/zones/us-central1-f/instanceGroups/corebox-mig01-usc1f"
+      { group =  "${data.terraform_remote_state.mig.instance_group}"
  },
     ],
   }
