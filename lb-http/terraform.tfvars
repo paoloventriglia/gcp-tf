@@ -4,7 +4,7 @@ terragrunt = {
    }
   remote_state {
     backend = "local"
-    config = { path = "/home/vagrant/tfstate/terraform.tfstate" }
+    config = { path = "/home/vagrant/tfstate/lb-http/terraform.tfstate" }
    }
 }  
 
@@ -15,7 +15,8 @@ name = "corebox-001-lb"
 target_tags = ["allow-http", "allow-service"]
 backends = {
     "0" = [
-      { group = "" },
+      { group = "https://www.googleapis.com/compute/v1/projects/corebox-001/zones/us-central1-f/instanceGroups/corebox-mig01-usc1f"
+ },
     ],
   }
 backend_params    = [

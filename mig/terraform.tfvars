@@ -4,7 +4,7 @@ terragrunt = {
   }
   remote_state {
     backend = "local"
-    config { path = "/home/vagrant/tfstate/terraform.tfstate" 
+    config { path = "/home/vagrant/tfstate/mig/terraform.tfstate" 
     }
   }
 }
