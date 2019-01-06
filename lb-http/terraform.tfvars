@@ -15,7 +15,7 @@ name = "corebox-001-lb"
 target_tags = ["allow-http", "allow-service"]
 backends = {
     "0" = [
-      { group = "corebox-mig01-usc1f" },
+      { group = "" },
     ],
   }
 backend_params    = [
